@@ -16,6 +16,8 @@ RUN	apk --update add curl tar git perl ruby docker \
 EXPOSE 8085
 EXPOSE 54663
 
+USER daemon:daemon
+
 VOLUME ${BAMBOO_HOME}
 
 WORKDIR ${BAMBOO_HOME}
