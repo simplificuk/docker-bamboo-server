@@ -7,7 +7,7 @@ ENV BAMBOO_VERSION  5.12.2.1
 
 # Install Atlassian Bamboo and helper tools
 
-RUN	apk --update add curl tar git perl \
+RUN	apk --update add curl tar git perl ruby docker \
 	&& mkdir -p ${BAMBOO_HOME} \
 	&& mkdir -p ${BAMBOO_INSTALL} \
 	&& curl -Ls "https://www.atlassian.com/software/bamboo/downloads/binary/atlassian-bamboo-${BAMBOO_VERSION}.tar.gz" | tar -xz --directory "${BAMBOO_INSTALL}" --strip-components=1 --no-same-owner \
